@@ -5,10 +5,8 @@ import {
 	FaReact,
 	FaNodeJs,
 	FaPython,
-	FaDatabase,
 	FaFire,
 	FaCuttlefish,
-	FaMicrosoft,
 } from "react-icons/fa";
 import { DiMsqlServer } from "react-icons/di";
 import {
@@ -18,6 +16,90 @@ import {
 	SiExpress,
 } from "react-icons/si";
 import { BsStars } from "react-icons/bs";
+import { motion } from "framer-motion";
+
+const skills = [
+	{
+		icon: <FaHtml5 className="text-orange-500 text-4xl mb-3 mx-auto" />,
+		label: "HTML",
+	},
+	{
+		icon: <FaCss3Alt className="text-blue-500 text-4xl mb-3 mx-auto" />,
+		label: "CSS",
+	},
+	{
+		icon: <SiTailwindcss className="text-teal-500 text-4xl mb-3 mx-auto" />,
+		label: "Tailwind CSS",
+	},
+	{
+		icon: <BsStars className="text-purple-500 text-4xl mb-3 mx-auto" />,
+		label: "DaisyUI",
+	},
+	{
+		icon: <FaJs className="text-yellow-400 text-4xl mb-3 mx-auto" />,
+		label: "JavaScript",
+	},
+	{
+		icon: <FaReact className="text-cyan-500 text-4xl mb-3 mx-auto" />,
+		label: "React",
+	},
+	{
+		icon: <FaNodeJs className="text-green-600 text-4xl mb-3 mx-auto" />,
+		label: "Node.js",
+	},
+	{
+		icon: <SiExpress className="text-gray-700 text-4xl mb-3 mx-auto" />,
+		label: "Express",
+	},
+	{
+		icon: <SiMongodb className="text-green-500 text-4xl mb-3 mx-auto" />,
+		label: "MongoDB",
+	},
+	{
+		icon: <FaFire className="text-orange-600 text-4xl mb-3 mx-auto" />,
+		label: "Firebase",
+	},
+	{
+		icon: <FaCuttlefish className="text-black text-4xl mb-3 mx-auto" />,
+		label: "C",
+	},
+	{
+		icon: <SiCplusplus className="text-blue-800 text-4xl mb-3 mx-auto" />,
+		label: "C++",
+	},
+	{
+		icon: <FaPython className="text-yellow-600 text-4xl mb-3 mx-auto" />,
+		label: "Python",
+	},
+	{
+		icon: (
+			<DiMsqlServer size={50} className="text-red-400 text-4xl mb-3 mx-auto" />
+		),
+		label: "Microsoft SQL",
+	},
+];
+
+const containerVariants = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+		},
+	},
+};
+const itemVariants = {
+	hidden: { opacity: 0, y: 20 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			type: "spring",
+			stiffness: 100,
+			damping: 12,
+		},
+	},
+};
 
 const Skills = () => {
 	return (
@@ -33,95 +115,26 @@ const Skills = () => {
 					<div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
 				</div>
 
-				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-					{/* HTML */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaHtml5 className="text-orange-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">HTML</h3>
-					</div>
-
-					{/* CSS */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaCss3Alt className="text-blue-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">CSS</h3>
-					</div>
-
-					{/* Tailwind CSS */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<SiTailwindcss className="text-teal-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">
-							Tailwind CSS
-						</h3>
-					</div>
-
-					{/* DaisyUI */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<BsStars className="text-purple-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">DaisyUI</h3>
-					</div>
-
-					{/* JavaScript */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaJs className="text-yellow-400 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">JavaScript</h3>
-					</div>
-
-					{/* React */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaReact className="text-cyan-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">React</h3>
-					</div>
-
-					{/* Node.js */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaNodeJs className="text-green-600 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">Node.js</h3>
-					</div>
-
-					{/* Express */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<SiExpress className="text-gray-700 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">Express</h3>
-					</div>
-
-					{/* MongoDB */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<SiMongodb className="text-green-500 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">MongoDB</h3>
-					</div>
-
-					{/* Firebase */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaFire className="text-orange-600 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">Firebase</h3>
-					</div>
-
-					{/* C */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaCuttlefish className="text-black text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">C</h3>
-					</div>
-
-					{/* C++ */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<SiCplusplus className="text-blue-800 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">C++</h3>
-					</div>
-
-					{/* Python */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<FaPython className="text-yellow-600 text-4xl mb-3 mx-auto" />
-						<h3 className="text-sm font-semibold text-gray-800">Python</h3>
-					</div>
-
-					{/* Microsoft SQL */}
-					<div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-						<DiMsqlServer size={50} className="text-red-400 text-4xl mb-3 mx-auto " />
-						<h3 className="text-sm font-semibold text-gray-800">
-							Microsoft SQL
-						</h3>
-					</div>
-				</div>
+				<motion.div
+					variants={containerVariants}
+					initial="hidden"
+					whileInView="show"
+					viewport={{ once: true }}
+					className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center"
+				>
+					{skills.map((skill, index) => (
+						<motion.div
+							key={index}
+							variants={itemVariants}
+							className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition"
+						>
+							{skill.icon}
+							<h3 className="text-sm font-semibold text-gray-800">
+								{skill.label}
+							</h3>
+						</motion.div>
+					))}
+				</motion.div>
 			</div>
 		</section>
 	);

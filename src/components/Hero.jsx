@@ -1,5 +1,5 @@
-import { Download } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
 	return (
@@ -16,9 +16,26 @@ const Hero = () => {
 								Hi, I'm{" "}
 								<span className="text-indigo-600">Mostafa Ahnaf Hossain</span>
 							</h1>
-							<h2 className="text-xl sm:text-2xl text-gray-700 font-semibold">
-								A MERN Stack Developer
+
+							<h2 className="text-xl sm:text-2xl text-gray-700 font-semibold h-8">
+								A{" "}
+								<span className="text-indigo-600">
+									<Typewriter
+										words={[
+											"MERN Stack Developer",
+											"Problem Solver",
+											"Tech Enthusiast",
+										]}
+										loop={0}
+										cursor
+										cursorStyle="|"
+										typeSpeed={70}
+										deleteSpeed={50}
+										delaySpeed={1500}
+									/>
+								</span>
 							</h2>
+
 							<p className="text-lg text-gray-700 max-w-xl mx-auto md:mx-0 mb-8">
 								A passionate advocate for modern web development, I excel at
 								creating scalable and elegant code that transforms concepts into
@@ -28,24 +45,32 @@ const Hero = () => {
 								forefront.
 							</p>
 
-							
+							<div className="flex gap-4 justify-center md:justify-start">
 								<a
-									href="https://drive.google.com/file/d/1Vg_LycXiCLOf_wZo6HAfb5U-h3FrPbNX/view?usp=sharing"
+									href="https://drive.google.com/file/d/1lG8dCxVDPYKGtfpkx53s1Ymt-31aA0uh/view?usp=sharing"
 									target="_blank"
 									rel="noopener noreferrer"
-									className=" px-4 py-2 text-md text-white rounded-t-lg font-semibold bg-blue-600"
+									className="px-4 py-2 text-md text-white rounded-t-lg font-semibold bg-blue-600"
 								>
 									View Resume
 								</a>
-							
+								<a
+									href="https://drive.google.com/file/d/1XPVXziKUJA_K3Zui1gXYhb02nYWeXhIo/view?usp=sharing"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-4 py-2 text-md text-white rounded-t-lg font-semibold bg-blue-600"
+								>
+									View CV
+								</a>
+							</div>
 						</div>
 
 						{/* Social Icons */}
 						<div className="flex justify-center md:justify-start space-x-6">
 							<a
 								target="_blank"
-								href="https://github.com/Ahnaf-221B "
-								className="text-gray-600 hover:text-indigo-600 transition-transform transform hover:scale-110 "
+								href="https://github.com/Ahnaf-221B"
+								className="text-gray-600 hover:text-indigo-600 transition-transform transform hover:scale-110"
 								aria-label="GitHub"
 							>
 								<FaGithub size={30} />
@@ -53,7 +78,7 @@ const Hero = () => {
 							<a
 								target="_blank"
 								href="https://www.linkedin.com/in/mostafa-ahnaf-hossain/"
-								className="text-gray-600 hover:text-indigo-600 transition-transform transform hover:scale-110 "
+								className="text-gray-600 hover:text-indigo-600 transition-transform transform hover:scale-110"
 								aria-label="LinkedIn"
 							>
 								<FaLinkedin size={30} />
@@ -71,7 +96,7 @@ const Hero = () => {
 									className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-500"
 								/>
 							</div>
-							<div className="absolute bottom-4 right-4 bg-white px-4 py-1 rounded-full text-sm font-medium shadow-md text-indigo-600 hidden sm:block">
+							<div className="absolute bottom-4 right-4 bg-white px-4 py-1 rounded-full text-sm font-medium shadow-md text-indigo-600 sm:block">
 								MERN Developer
 							</div>
 						</div>
