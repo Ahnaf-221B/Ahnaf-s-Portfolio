@@ -6,8 +6,8 @@ const Navbar = () => {
 	const sections = ["home", "about", "skills", "projects", "contact"];
 	const docLink1 =
 		"https://drive.google.com/file/d/1lG8dCxVDPYKGtfpkx53s1Ymt-31aA0uh/view?usp=sharing";
-		const docLink2 =
-			"https://drive.google.com/file/d/1XPVXziKUJA_K3Zui1gXYhb02nYWeXhIo/view?usp=sharing";
+	const docLink2 =
+		"https://drive.google.com/file/d/1XPVXziKUJA_K3Zui1gXYhb02nYWeXhIo/view?usp=sharing";
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -91,7 +91,7 @@ const Navbar = () => {
 						</a>
 					))}
 					<a
-						href={docLink}
+						href={docLink1}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="block text-blue-600 hover:underline font-semibold px-3 pt-2"
@@ -100,7 +100,7 @@ const Navbar = () => {
 						Resume
 					</a>
 					<a
-						href={docLink}
+						href={docLink2}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="block text-blue-600 hover:underline font-semibold px-3 pt-2"
