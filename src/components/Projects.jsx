@@ -7,6 +7,29 @@ export default function Projects() {
 	const projects = [
 		{
 			id: 1,
+			title: "The Sentinal Times - Newspaper Website",
+			description:
+				"The Sentinal Times is a modern newspaper website that provides up-to-date news coverage on various topics. It features a user-friendly interface with easy navigation and a clean design. The platform offers a wide range of articles, including news, opinion, business, technology, and more. Users can access the latest news, read articles in detail, and stay informed about current events.",
+			image: "https://i.postimg.cc/t4MF51SK/Screenshot-2025-08-04-232659.png",
+			technologies: [
+				"React",
+				"Tailwind",
+				"NodeJs",
+				"ExpressJs",
+				"MongoDB",
+				"Firebase",
+				"JWT",
+			],
+			liveUrl: "https://thesentinaltimes.web.app/",
+			githubUrl:
+				"https://github.com/Ahnaf-221B/The-Sentinal-Times-Newspaper-Website-Client",
+			challenges:
+				"In The Sentinal Times newspaper project, the main challenge was managing the state of bills, payment status, and user sessions across multiple components, particularly while ensuring real-time updates without data inconsistencies.",
+			futureWork:
+				"Add a personalized news recommendation system using AI that learns from users' reading habits and preferences to suggest relevant articles",
+		},
+		{
+			id: 2,
 			title: "BookFlow-Library Management System",
 			description:
 				"BookFlow is a comprehensive library management system designed to streamline daily operations. It offers intuitive features for organizing book inventories, tracking availability, and managing user borrowing and returns. With a clean interface and real-time updates, BookFlow reduces administrative workload and enhances the overall efficiency of library workflows.",
@@ -29,7 +52,7 @@ export default function Projects() {
 				"Add online borrowing, adding bookmarks, and analytics dashboard.",
 		},
 		{
-			id: 2,
+			id: 3,
 			title: "RecipeBook-Recipe Management System",
 			description:
 				"RecipeBook is a full-featured recipe management platform designed for food enthusiasts to easily organize, share, and discover culinary creations. Users can create personal recipe collections, edit or delete existing entries, and explore a community-driven repository of diverse dishes. The platform supports user authentication, recipe likes, and categorization, making it simple to interact with others, gain inspiration, and build a personalized cookbook. With an intuitive interface and real-time updates, RecipeBook turns casual cooking into a connected culinary experience.",
@@ -51,7 +74,7 @@ export default function Projects() {
 			futureWork: "Allow meal planning and integration with shopping lists.",
 		},
 		{
-			id: 3,
+			id: 4,
 			title: "Marigold-Bill Management System",
 			description:
 				"Marigold is a modern web application designed to simplify bill management for users. It provides a clean, intuitive interface where users can view, track, and settle their outstanding bills with ease. The platform ensures transparency by displaying detailed bill summaries, due dates, and payment statuses. With a focus on usability and real-time updates, Marigold reduces the complexity of financial tracking and encourages timely payments, making it an ideal solution for individuals or organizations managing multiple bills.",
@@ -62,7 +85,8 @@ export default function Projects() {
 				"https://github.com/Ahnaf-221B/MariGold-Bill-Management-System",
 			challenges:
 				"Managing the state of bills, payment status, and user sessions across multiple components became complex, especially while ensuring real-time updates without data inconsistencies.",
-			futureWork: "Add auto-reminders and recurring bill automation.Also add the payment method",
+			futureWork:
+				"Add auto-reminders and recurring bill automation.Also add the payment method",
 		},
 	];
 
@@ -76,7 +100,7 @@ export default function Projects() {
 					<div className="w-20 h-1 bg-blue-600 mx-auto"></div>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
 					{projects.map((project) => (
 						<div
 							key={project.id}
