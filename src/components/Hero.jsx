@@ -41,7 +41,7 @@ const Hero = () => {
 								<span className="text-blue-600 dark:text-blue-400">
 									<TypeAnimation
 										sequence={[
-											"MERN Stack Developer",
+											"Full Stack Developer",
 											1500,
 											"Problem Solver",
 											1500,
@@ -73,7 +73,7 @@ const Hero = () => {
 								transition={{ delay: 0.8 }}
 							>
 								<a
-									href="https://drive.google.com/file/d/1lG8dCxVDPYKGtfpkx53s1Ymt-31aA0uh/view?usp=sharing"
+									href="https://drive.google.com/file/d/1000bT3Et_tsTz9LsYXYc3Ts3aM7ODzjn/view?usp=sharing"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="px-6 py-3 text-md text-white rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all shadow-md hover:shadow-lg flex items-center gap-2"

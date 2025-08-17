@@ -19,7 +19,7 @@ export default function Footer() {
               Mostafa Ahnaf Hossain
             </h3>
             <p className="text-gray-400 mb-6">
-              A MERN Developer passionate about creating innovative web solutions.
+              A Full Stack Developer passionate about creating innovative web solutions.
             </p>
             <div className="flex space-x-5">
               <motion.a
@@ -124,9 +124,7 @@ export default function Footer() {
           <p className="text-gray-400">
             © {currentYear} Mostafa Ahnaf Hossain. All rights reserved.
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Built with React, Tailwind CSS, and ❤️
-          </p>
+          
         </motion.div>
       </div>
     </footer>
